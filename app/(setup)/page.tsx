@@ -33,7 +33,6 @@ import React from 'react'
 
 const SetupPage = async() => {
     const profile = await initialProfile();
-    // console.log(profile.id);
     
     const server = await db.server.findFirst({
         where:{
@@ -44,9 +43,10 @@ const SetupPage = async() => {
             }
         }
     });
-
     if(server){
-        return redirect(`/servers/${server.id}`)
+        console.log(server);
+        
+        return redirect(`/servers/${server.id}`);
     }
   return (
     <div>
