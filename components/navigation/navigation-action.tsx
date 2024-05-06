@@ -2,14 +2,19 @@
 
 import { Plus } from "lucide-react"
 import { ActionTooltip } from "@/components/action-tooltip"
+import { useModal } from "@/hooks/use-modal-store"
 
 export const NavigationAction = () => {
+    const { onOpen } = useModal();
+
+
     return(
             <ActionTooltip
             side="right"
             align = "center"
             label = "Add a server">
                 <button
+                onClick = {() => onOpen("createServer")}
                 className = "group"
                 >
                     <div 
