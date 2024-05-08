@@ -60,6 +60,7 @@ const CreateServerModal: FC<InitialModalProps> = ({}) => {
 
       form.reset();
       router.refresh();
+      onClose();
     } catch (error) {
       console.log(error);
       
