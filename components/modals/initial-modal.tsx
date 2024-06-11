@@ -54,7 +54,6 @@ const InitialModal: FC<InitialModalProps> = ({}) => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      console.log("hello mumma");
       
       await axios.post("/api/servers" , values);
 
